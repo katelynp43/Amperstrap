@@ -1,0 +1,9 @@
+.tooltip {
+  .tooltip-inner {
+    border-radius: 4px;
+    background-color: $brandSecondary;
+  }
+  &.bottom .tooltip-arrow {
+    border-bottom-color:$brandSecondary;
+  }
+}

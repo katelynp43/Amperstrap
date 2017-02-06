@@ -1,0 +1,23 @@
+footer.footer {
+	&.footerOut {
+		background-color: $grayDark;
+		h1, h2, h3, h4, h5, h6, p, a {
+			color: $white;
+		}
+	}
+	&.footerIn {
+		background-color: #F8F8F8;
+		h1, h2, h3, h4, h5, h6, p, a {
+			color: $grayDark;
+		}
+	}
+}
+footer.footer .footer-main {
+	width: 100%;
+	h5 {
+		margin-bottom: 1em;
+	}
+	p {
+		font-size: .75em;
+	}
+}

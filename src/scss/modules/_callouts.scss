@@ -1,0 +1,34 @@
+.callout{
+  background-color: $grayDark;
+  color: $white;
+  text-align: center;
+  padding: 1*$unit 15px;
+  .callout-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 32px;
+    display: block;
+  }
+  @include bp-at-least($bp__md) {
+    h1 {
+      font-weight: bold;
+      letter-spacing: 1px;
+      display: inline-block;
+    }
+  }
+  .btn{
+    width: auto;
+    display: inline-block;
+    margin: 1em 0 0 0em;
+  }
+  @include bp-at-least($bp__md) {
+    .btn {
+      display: inline-block;
+      margin: -1em 0 0 2em;
+    }
+  }
+}

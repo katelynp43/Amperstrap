@@ -1,0 +1,12 @@
+blockquote{
+  p{
+    font-family: $serif;
+    font-size: 30px;
+    &:before{
+      content:"\“";
+    }
+    &:after{
+      content:"\”";
+    }
+  }
+}

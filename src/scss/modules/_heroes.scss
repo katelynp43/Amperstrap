@@ -1,0 +1,70 @@
+.hero{
+  position: relative;
+  background-color: $brandPrimary;
+  opacity: 10%;
+  padding: 1*$unit 0 2*$unit;
+  @include bp-at-least($bp__sm) {
+    padding: 4*$unit 0;
+  }
+  a[href^="tel"],
+  a[href^="mailto"] {
+    color: $white;
+    text-decoration: none;
+    border-bottom: 0;
+    &:hover {
+      color: $white;
+      text-decoration: none;
+      border-bottom: 0;
+    }
+    &:focus {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 0;
+    }
+  }
+}
+
+.hero h1,
+.hero h2,
+.hero p {
+  max-width: 950px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0 auto 0.5*$unit;
+  font-weight: bold;
+  color: $white;
+  @include bp-at-least($bp__md) {
+    margin: 0 auto 0.5*$unit;
+  }
+}
+
+.hero p {
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 300;
+  margin: 0 auto 0.5*$unit;
+  color: $white;
+  @include bp-at-least($bp__md) {
+    margin: 0 auto 0.5*$unit;
+  }
+  @include bp-at-least($bp__lg) {
+    font-size: 18px;
+  }
+}
+
+.hero .btn-block {
+  text-align: center;
+  padding: 1em;
+  .btn:first-child {
+    margin-bottom: 1em;
+  }
+  @include bp-at-least($bp__md) {
+    .btn:first-child {
+      margin-right: 1em;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.action-bar {
+  span {
+    font-size: 25px;
+    vertical-align: middle;
+  }
+  .actions {
+    @include bp-at-least($bp__lg) {
+      float: right;
+    }
+  }
+  h6 {
+    &:only-child {
+      display: inline-block;
+    }
+    display: inline-block;
+    margin-right: 10px;
+    text-align: left;
+    &:last-child {
+      margin-right: 0;
+    }
+    @include bp-at-least($bp__sm) {
+      text-align: right;
+    }
+    @include bp-at-least($bp__lg) {
+      margin-right: 10px;
+    }
+  }
+  a {
+    color: $gray;
+    &:hover {
+      color: $brandSecondary;
+      border: 0;
+    }
+  }
+}

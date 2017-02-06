@@ -1,0 +1,38 @@
+.alert {
+  padding: 5px 15px;
+  margin: 10px 0;
+  border: 1px solid transparent;
+  border-radius: 0px;
+
+  p {
+    font-weight: 400;
+    line-height: 25px;
+  }
+
+  &.alert-success {
+    // background-color: $brandPrimary;
+    // border-color: $brandPrimary;
+    background-color: $brandSecondary;
+    border-color: $brandSecondary;
+    color: $white;
+  }
+
+  &.alert-info {
+    background-color: #4A90E2;
+    border-color: #4A90E2;
+    color: $white;
+  }
+
+  &.alert-warning {
+    background-color: $brandSecondary;
+    border-color: $brandSecondary;
+    color: $white;
+  }
+
+  &.alert-danger {
+    background-color: #C42727;
+    border-color: #C42727;
+    color: $white;
+  }
+
+}

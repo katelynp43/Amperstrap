@@ -1,0 +1,252 @@
+address{
+  font-style: normal;
+}
+
+form{
+  width: 100%;
+  font-size: 14px;
+  font-family: $sans-serif;
+}
+
+.form-group {
+  margin-bottom: 0;
+  .col-md-6 {
+    padding-left: 0;
+    padding-right: 0;
+    &:first-child {
+      padding-right: 5px;
+    }
+  }
+}
+
+fieldset{
+  float: left;
+  width: 100%;
+  @include bp-at-least($bp__md) {
+    width: 50%;
+    float: left;
+    padding-right: 1*$unit;
+  }
+  margin: 0;
+  padding: 0;
+  border: 0 solid $black;
+}
+
+input[type="text"],
+input[type="phone"],
+input[type="telephone"],
+input[type="email"],
+input[type="number"] {
+  width: 100%;
+  padding: 1em .5em 1em 1em;
+  outline: 0;
+  background-color: $white;
+  border: 1px solid $grayLight;
+  color: $grayDark;
+  margin-bottom: 1em;
+  border-radius: 4px;
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 10px $white;
+  }
+}
+
+textarea {
+  width: 100%;
+  padding: 1em .5em 1em 1em;
+  outline: 0;
+  background-color: $white;
+  border: 1px solid $grayLight;
+  color: $grayDark;
+  margin-bottom: 1em;
+  border-radius: 4px;
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 10px $white;
+  }
+}
+
+//IOS Overrides
+input, textarea {
+  // -webkit-appearance: none;  // remove shadow in iOS
+  border-radius: 4px;  // remove border-radius in iOS
+}
+
+
+label {
+  word-wrap: break-word;
+  margin: 0;
+  font-weight: 300;
+  // font-size: 14px;
+}
+
+ select {
+  width: 100%;
+  height: 3.5em;
+  background-color: $white;
+  font-family: $sans-serif;
+  color: $grayDark;
+  font-size: 14px;
+  margin-bottom: 1em;
+  -webkit-appearance: none;
+  outline: 0;
+  border-radius: 4px;
+  padding: 5px 50px 5px 10px;
+  border: 1px solid $grayLight;
+  background: url('../img/dropdown.png') no-repeat right $white;
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 10px $white;
+  }
+  &.placeholder {
+    color: $gray;
+  }
+  &[disabled=disabled] {
+    color: $gray;
+  }
+ }
+ select::-ms-expand {
+    display: none;
+}
+
+input[type='submit'] {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  padding: .5em 0;
+  width: 100%;
+  background: $brandSecondary;
+  color: $white;
+  outline: 0;
+  border: 1px solid $brandSecondary;
+  font-family: $sans-serif;
+  text-decoration: none;
+  text-align: center;
+  transition: background 400ms;
+  font-weight: 400;
+  border-radius: 4px;
+  font-size: 20px;
+  line-height: 28px;
+  @include bp-at-least($bp__md) {
+    padding: .5em 5em;
+    width: 100%;
+  }
+  &:visited{
+    color: $white;
+  }
+  &:hover{
+    background: $brandSecondaryDark;
+    border: 1px solid $brandSecondaryDark;
+    color: $white;
+  }
+  &:disabled,
+  &[disabled=disabled]{}
+  &:active{
+    color: $white;
+    background: $brandSecondary;
+  }
+}
+
+
+.inline-submit {
+  width: 100%;
+  input[type='text'] {
+    height: 42px;
+    margin-right: 0;
+    width: 60%;
+    border: 1px solid $white;
+  }
+  input[type='submit'] {
+    padding: 0.5em .5em;
+    margin-left: -4px;
+    margin-top: 13px;
+    width: 40%;
+  }
+}
+
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin: 0 10px 0 0px;
+}
+
+input[type="radio"]:checked {
+  background-color: brandPrimary;
+}
+
+.recurring {
+  display: none;
+}
+
+
+
+// Custom Checkbox Styles
+input[type="checkbox"] {
+  display: none;
+}
+.checkboxes {
+  label {
+    cursor: pointer;
+    margin-left: 30px;
+    margin-bottom: 1em;
+  }
+}
+input[type="checkbox"] + label:before {
+  border: 1px solid $grayLight;
+  background-color: $white;
+  content: "\00a0";
+  color: $grayDark;
+  display: inline-block;
+  font: 14px/1em sans-serif;
+  height: 20px;
+  margin: 0 .75em 0 -30px;
+  padding: 2px;
+  vertical-align: top;
+  width: 20px;
+  border-radius: 4px;
+  font-weight: 300;
+}
+input[type="checkbox"]:checked + label:before {
+  background: $white;
+  color: $grayDark;
+  content: "\2713";
+  text-align: center;
+  -webkit-transition:color 0.4s linear;
+  -o-transition:color 0.4s linear;
+  -moz-transition:color 0.4s linear;
+  transition:color 0.4s linear;
+  font-weight: 300;
+}
+
+
+
+// Custom Radio Buttons Styles
+input[type="radio"] {
+    display:none;
+}
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+}
+
+input[type="radio"] + label span {
+     background-color:$grayLight;
+}
+
+input[type="radio"]:checked + label span{
+     background-color:$brandSecondary;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+  -webkit-transition:background-color 0.4s linear;
+  -o-transition:background-color 0.4s linear;
+  -moz-transition:background-color 0.4s linear;
+  transition:background-color 0.4s linear;
+}

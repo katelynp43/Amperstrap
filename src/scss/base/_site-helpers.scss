@@ -1,0 +1,39 @@
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+.text-center{
+  text-align: center;
+}
+
+.line__top {
+  border-top: 1px solid $grayBackground;
+  padding-top: 15px;
+}
+
+.line__bottom {
+  border-bottom: 1px solid $grayBackground;
+  padding-bottom: 15px;
+}
+
+.line__left {
+  @include bp-at-least($bp__md) {
+    border-left: 1px solid $grayBackground;
+    padding-left: 15px;
+  }
+}
+
+.line__right {
+  @include bp-at-least($bp__md) {
+    border-right: 1px solid $grayBackground;
+    padding-right: 15px;
+  }
+}
+
+.padding-sides {
+  @include bp-at-least($bp__sm) {
+    padding: 0 1.25em!important;
+  }
+}

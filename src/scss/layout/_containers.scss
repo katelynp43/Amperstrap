@@ -1,0 +1,62 @@
+@include bp-at-least($bp__sm) {
+  .container {
+    width: 750px;
+  }
+}
+@include bp-at-least($bp__md) {
+  .container {
+    width: 970px;
+  }
+}
+@include bp-at-least($bp__lg) {
+  .container {
+    width: 1180px;
+  }
+}
+@include bp-at-least($bp__xl) {
+  .container {
+    width: 1320px;
+  }
+}
+.container--small {
+  *zoom: 1;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container--small:before {
+  content: '';
+  display: table;
+}
+.container--small:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.container--medium {
+  *zoom: 1;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container--medium:before {
+  content: '';
+  display: table;
+}
+.container--medium:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.container--full {
+  *zoom: 1;
+}
+.container--full:before {
+  content: '';
+  display: table;
+}
+.container--full:after {
+  content: '';
+  display: table;
+  clear: both;
+}

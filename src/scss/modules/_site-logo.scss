@@ -1,0 +1,11 @@
+.logo{
+  width: 120px;
+  margin-top: -10px;
+  @include bp-at-least($bp__md) {
+    max-width: 120px;
+    width: 100%;
+  }
+  &:hover{
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,97 @@
+@import "mixins/background";
+
+/***
+Colors
+--------------------------------------------------------- */
+$brandPrimary: #8cbeb2; /* blue */
+$brandPrimaryLight: lighten($brandPrimary, 10%);
+$brandPrimaryDark: darken($brandPrimary, 10%);
+
+$brandSecondary: #5c4b51; /* dark purple */
+$brandSecondaryLight: lighten($brandSecondary, 10%);
+$brandSecondaryDark: darken($brandSecondary, 10%);
+
+$brand: #5c4b51; /* dark purple */
+$brandLight: lighten($brand, 10%);
+$brandDark: darken($brand, 10%);
+
+$brandBackground: #F8F8F8; /* light gray */
+
+$red: #f06060;
+$red-light: lighten($red, 10%);
+$red-dark: darken($red, 20%);
+
+$orange: #f3b562;
+$orange-light: lighten($orange, 10%);
+$orange-dark: darken($orange, 20%);
+
+$yellow: #f2ebbf;
+$yellow-light: lighten($yellow, 10%);
+$yellow-dark: darken($yellow, 20%);
+
+$green: #90be8c;
+$green-light: lighten($green, 10%);
+$green-dark: darken($green, 20%);
+
+$blue: #8cbeb2;
+$blue-light: lighten($blue, 10%);
+$blue-dark: darken($blue, 20%);
+
+$purple: #5c4b51;
+$purple-light: lighten($purple, 10%);
+$purple-dark: darken($purple, 20%);
+
+
+// Aux Colors
+$white: rgb(255, 255, 255);
+$black: rgb(34, 34, 34);
+
+$gray: #9B9B9B;
+$grayLight: #cccccc;
+$grayDark: #4A4A4A;
+$grayBackground: #EBEBEB;
+
+// Colors as Class Names
+// add the class .bg-color to any div to make a background color the value of the one below
+// add the class .text-color to any div to make the text color the value of the one below
+$colors:(
+  "brandPrimary": $brandPrimary,
+  "brandPrimaryLight": $brandPrimaryLight,
+  "brandPrimaryDark": $brandPrimaryDark,
+  "brandSecondary": $brandSecondary,
+  "brandSecondaryLight": $brandSecondaryLight,
+  "brandSecondaryDark": $brandSecondaryDark,
+  "white": $white,
+  "black": $black,
+  "gray": $gray,
+  "grayLight": $grayLight,
+  "grayDark": $grayDark,
+  "grayBackground": $grayBackground,
+  "red": $red,
+  "red-light": $red-light,
+  "red-dark": $red-dark,
+  "orange": $orange,
+  "orange-light": $orange-light,
+  "orange-dark": $orange-dark,
+  "yellow": $yellow,
+  "yellow-light": $yellow-light,
+  "yellow-dark": $yellow-dark,
+  "green": $green,
+  "green-light": $green-light,
+  "green-dark": $green-dark,
+  "blue": $blue,
+  "blue-light": $blue-light,
+  "blue-dark": $blue-dark,
+  "purple": $purple,
+  "purple-light": $purple-light,
+  "purple-dark": $purple-dark
+);
+
+@each $key, $value in $colors {
+  .bg-#{$key} {
+    @include background($value);
+  }
+  .text-#{$key} {
+    color: $value;
+  }
+}

@@ -1,0 +1,45 @@
+blockquote{
+  p{
+    font-family: $serif;
+    font-size: 30px;
+    &:before{
+      content:"\“";
+    }
+    &:after{
+      content:"\”";
+    }
+  }
+}
+
+
+.banner--image{
+  background-color: $gray;
+  background-repeat: none;
+  background-size: cover;
+  background-position: center center;
+  padding: 6*$unit 0;
+  text-align: center;
+}
+.banner--image h1{
+  font-size: 16px;
+  @include bp-at-least($bp__md) {
+    font-size: 16px;
+    margin: 0 auto;
+  }
+  font-family: $sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  color: $white;
+  text-transform: uppercase;
+}
+.banner--image p{
+  font-size: 20px;
+  @include bp-at-least($bp__md) {
+    font-size: 52px;
+    margin: 0 auto;
+  }
+  font-family: $serif;
+  max-width: 900px;
+  margin: 0 auto;
+  color: $white;
+}

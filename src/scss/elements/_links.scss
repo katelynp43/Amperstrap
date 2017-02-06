@@ -1,0 +1,58 @@
+a{
+	color: $black;
+	text-decoration: none;
+	transition: 0.3s ease;
+	border-bottom: 1px solid transparent;
+  cursor: pointer;
+	&:visited{}
+	&:hover{
+		text-decoration: none;
+		color: $brandPrimary;
+		transition: 0.3s ease;
+		border-bottom: 1px solid $brandPrimary;
+	}
+}
+a:hover, a:focus {
+    color: $brandPrimary;
+    text-decoration: none;
+}
+
+a[href^="tel"] {
+    // color: $brandPrimary;
+    text-decoration: none;
+    border-bottom: 0;
+    &:hover {
+      color: $brandPrimary;
+      text-decoration: none;
+      border-bottom: 0;
+    }
+    &:focus {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 0;
+  }
+}
+
+p a{
+	color: inherit;
+	text-decoration: underline;
+  border-bottom: 1px solid transparent;
+	&:hover{
+		color: inherit;
+    text-decoration: underline;
+    border-bottom: 1px solid transparent;
+	}
+}
+
+a.text-link::before {
+	content: "\f054";
+	display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  padding-right: .5em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}

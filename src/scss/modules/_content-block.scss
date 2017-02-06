@@ -1,0 +1,32 @@
+.content-block {
+  padding-top: 1*$unit;
+  padding-bottom: 2*$unit;
+  h1, h2, h3, h4, h5, h6 {
+    padding-top: 1em;
+    margin-bottom: .5em;
+  }
+  .btn,
+  .btn--center {
+    display: block;
+    margin: 2em auto;
+    max-width: 20em;
+  }
+  .btn--left {
+    display: block;
+    margin: 0;
+    max-width: 20em;
+  }
+}
+
+.content-block--gray {
+  background-color: $gray;
+  padding-top: 1*$unit;
+  padding-bottom: 2*$unit;
+  h1, h2, h3, h4, h5, h6 {
+    padding-top: 1em;
+  }
+  .btn {
+    margin: 2em 0;
+    max-width: 20em;
+  }
+}
